@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>http://blog.claudioonohara.eti.br/blog/2015/10/17/java-exceptions/</loc>
+    <lastmod>2015-10-17T14:55:59-04:00</lastmod>
+  </url>
+  <url>
+    <loc>http://blog.claudioonohara.eti.br/blog/2015/09/24/ssd-vs-raid0/</loc>
+    <lastmod>2015-09-24T22:49:16-04:00</lastmod>
+  </url>
+  <url>
+    <loc>http://blog.claudioonohara.eti.br/blog/2015/09/22/hello-world-angular/</loc>
+    <lastmod>2015-09-22T20:18:45-04:00</lastmod>
+  </url>
+  <url>
+    <loc>http://blog.claudioonohara.eti.br/blog/archives/</loc>
+  </url>
+  <url>
+    <loc>http://blog.claudioonohara.eti.br/</loc>
+  </url>
+  <url>
+    <loc>http://blog.claudioonohara.eti.br/blog/categories/framework-front-end/</loc>
+  </url>
+  <url>
+    <loc>http://blog.claudioonohara.eti.br/blog/categories/hardware/</loc>
+  </url>
+  <url>
+    <loc>http://blog.claudioonohara.eti.br/blog/categories/java/</loc>
+  </url>
+  <url>
+    <loc>http://blog.claudioonohara.eti.br/downloads/code/2015-10-12-estrutura-basica-angularjs/index.html</loc>
+    <lastmod>2015-10-12T22:21:42-04:00</lastmod>
+  </url>
+  <url>
+    <loc>http://blog.claudioonohara.eti.br/downloads/code/2015-10-12-estrutura-basica-angularjs/index_controlador.html</loc>
+    <lastmod>2015-10-12T23:21:39-04:00</lastmod>
+  </url>
+  <url>
+    <loc>http://blog.claudioonohara.eti.br/downloads/code/Hello_Angular.html</loc>
+    <lastmod>2015-09-22T23:53:03-04:00</lastmod>
+  </url>
+</urlset>

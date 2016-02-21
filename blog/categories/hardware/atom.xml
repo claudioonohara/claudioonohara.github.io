@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Categoria: Hardware | Programação e Hardware]]></title>
+  <link href="http://blog.claudioonohara.eti.br/blog/categories/hardware/atom.xml" rel="self"/>
+  <link href="http://blog.claudioonohara.eti.br/"/>
+  <updated>2016-02-20T21:04:10-03:00</updated>
+  <id>http://blog.claudioonohara.eti.br/</id>
+  <author>
+    <name><![CDATA[CLAUDIO ONOHARA]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[SSD vs RAID 0]]></title>
+    <link href="http://blog.claudioonohara.eti.br/blog/2015/09/24/ssd-vs-raid0/"/>
+    <updated>2015-09-24T22:49:16-04:00</updated>
+    <id>http://blog.claudioonohara.eti.br/blog/2015/09/24/ssd-vs-raid0</id>
+    <content type="html"><![CDATA[<p>Só para curiosidade segue testes efetuados com discos ligados em RAID 0 e um disco SSD  </p>
+
+
+
+
+<h3>SSD</h3>
+
+
+<!-- more -->
+
+
+<h4>INFO:</h4>
+
+
+<ul>
+  <li>OS: UBUNTU 14.04</li>
+  <li>FS: EXT4</li>
+</ul>
+
+
+<p><blockquote><p>Model=Samsung SSD 840 EVO 250GB, FwRev=EXT0DB6Q<br/> Config={ Fixed }<br/> RawCHS=16383/16/63, TrkSize=0, SectSize=0, ECCbytes=0<br/> BuffType=unknown, BuffSize=unknown, MaxMultSect=1, MultSect=1<br/> CurCHS=16383/16/63, CurSects=16514064, LBA=yes, LBAsects=488397168<br/> IORDY=on/off, tPIO={min:120,w/IORDY:120}, tDMA={min:120,rec:120}<br/> PIO modes:  pio0 pio1 pio2 pio3 pio4<br/> DMA modes:  mdma0 mdma1 mdma2<br/> UDMA modes: udma0 udma1 udma2 udma3 udma4 udma5 *udma6<br/> AdvancedPM=no WriteCache=enabled<br/> Drive conforms to: unknown:  ATA/ATAPI-2,3,4,5,6,7</p></blockquote></p>
+
+<p> <h4>HDPARM TESTE:</h4></p>
+
+<p><blockquote><p>????@dev:~# hdparm -t /dev/sda1</p></p><p><p>/dev/sda1:<br/> Timing buffered disk reads: 1542 MB in  3.00 seconds = 513.76 MB/sec</p></blockquote></p>
+
+<p> <h3>RAID 0</h3></p>
+
+<h4>INFO:</h4>
+
+
+<ul>
+  <li>OS: UBUNTU 14.04</li>
+  <li>FS: EXT4</li>
+  <li>RAID 0 efetuado pela placa-mãe ASUS P5WDH-DELUXE(STRIP:128KB)</li>
+  <li>2 X SAMSUNG Spinpoint F1 HD322HJ 320GB 7200 RPM 16MB Cache SATA 3.0Gb/s 3.5"</li>
+</ul>
+
+
+<p> <h4>HDPARM TESTE:</h4></p>
+
+<p><blockquote><p>????@dev:~# hdparm -t /dev/mapper/isw_deefcbeej_raidlinux1</p></p><p><p>/dev/mapper/isw_deefcbeej_raidlinux1:<br/> Timing buffered disk reads: 652 MB in  3.00 seconds = 217.17 MB/sec</p></p><p><p></p></blockquote></p>
+
+<h4>ANALISE:</h4>
+
+
+<p>O SSD apesar de ser um tipo de hardware mais novo, foi melhor reconhecido pelo sistema operacional UBUNTU. Digo
+isso, porque utilizando o mesmo hardware no Windows 7(para testes foi utilizado o hdtach)
+o resultado obtido para o SSD foi praticamente igual, já para o RAID 0, leitura ficou na casa dos 300MB/sec .</p>
+
+
+<p>O conjunto de hardware necessário para realizar o RAID 0 atualmente ainda é mais barato,
+e possui um custo por GB muito mais barato, mas possui um desempenho menor que um SSD e a controladora RAID pode não ser
+reconhecida pelo sistema operacional escolhido.</p>
+
+]]></content>
+  </entry>
+  
+</feed>

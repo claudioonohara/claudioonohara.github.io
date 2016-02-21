@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://blog.claudioonohara.eti.br/sitemap.xml 

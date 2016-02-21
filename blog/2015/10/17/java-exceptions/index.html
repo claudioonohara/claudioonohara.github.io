@@ -1,0 +1,472 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>JAVA Exceptions - Programação e Hardware</title>
+  <meta name="author" content="CLAUDIO ONOHARA">
+
+  
+  <meta name="description" content="Uma exception é um evento que altera o fluxo do programa. E a super classe Throwable representa esses eventos. As exceptions podem ser divididas em &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://blog.claudioonohara.eti.br/blog/2015/10/17/java-exceptions/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Programação e Hardware" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-60320216-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Programação e Hardware</a></h1>
+  
+    <h2>CLAUDIO ONOHARA -> Hello World!</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="blog.claudioonohara.eti.br">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Posts</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">JAVA Exceptions</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-10-17T14:55:59-04:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>17</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>2:55 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><!-- more -->
+
+
+<p><img src="/images/2015-10-17-java-exceptions/exception_hierarchy_in_java.png" alt="Hierarquia Exception"></p>
+
+<p>Uma exception é um evento que altera o fluxo do programa. E a super classe Throwable representa esses eventos.</p>
+
+
+
+
+<p>As exceptions podem ser divididas em checked e unchecked.</p>
+
+
+
+
+<p>As exceptions do tipo checked, são as exceptions filhas da java.lang.Exception que não estendem a java.lang.RuntimeException.</p>
+
+
+
+
+<p>
+    As exceptions do tipo unchecked, estendem Error e RuntimeException.
+</p>
+
+
+
+
+<h3>Errors</h3>
+
+
+<p>São disparados pela JVM e não devem ser tratados ou declarados pelo programador. Ex:</p>
+
+
+<ul>
+  <li>ExceptionInInitializerError</li>
+  <p>Ocorre quando uma exception acontece dentro de um inicializador estatico. Quando isso ocorre a classe não pode ser usada, o que gera um erro.</p>
+  <li>StackOverflowError</li>
+  <p>
+    Acontece geralmente quando um metodo se chama recursivamente. Cada chamada ao metodo coloca variaveis locais e parametros em uma pilha, que fica sem espaço e transborda(overflow), quando são feitas um grande numero de chamadas.
+  </p>
+  <li>NoClassDefFoundError</li>
+    <p>
+        Esta relacionado geralmete a problemas de classpath.
+    </p>  
+</ul>
+
+
+
+
+<h3>Runtime Exceptions</h3>
+
+
+<p>Podem ser disparados pela JVM e pelo programador. Mas não precisam ser declarados nem tratados pelo programador. Ex:</p>
+
+
+<ul>
+  <li>ArithmeticException</li>
+    <p>
+        Ocorre por exemplo, quando é feito uma tentativa de divisão de um inteiro por zero.
+    </p>
+  <li>ArrayIndexOutOfBoundsException</li>
+    <p>
+        Ocorre por exemplo, quando é feita uma tentativa de acessar um indice de array que nao existe.
+    </p>
+  <li>ClassCastException</li>
+    <p>
+        Ocorre por exemplo, quando é feita uma tentativa de cast de uma variavel string para int, mas a string não é composta por caracteres numericos, tornando o cast impossivel.
+    </p>
+  <li>IllegalArgumentException</li>
+    <p>
+        Ocorre por exemplo, quando se tenta usar uma classe que espera valores positivos como parametro, mas é enviado o valor negativo para ela.
+    </p>
+  <li>NullPointerException</li>
+    <p>
+        Ocorre por exemplo, ao tentar utilizar um metodo de uma variavel de instancia do tipo objeto, mas a variavel ainda não aponta para instancia alguma.
+    </p>
+  <li>NumberFormatException</li>
+  <p>
+    Ocorre por exemplo, quando se tenta transformar(diferente de um cast, aqui se usa por exemplo um parseInt) uma string para inteiro, mas a string não é composta por caracteres numericos. NumberFormatException é uma subclasse de IllegalArgumentException. 
+  </p>
+</ul>
+
+
+
+
+<h3>Checked Exceptions</h3>
+
+
+<p>
+    Podem ser disparados pela JVM ou pelo programador. E devem ser tratadas (try/catch) ou declaradas(throws) pelo programador. Ex:
+</p>
+
+
+<ul>
+  <li>FileNotFoundException</li>
+    <p>
+        Ocorre quando é feita uma tentativa de acesso a um arquivo que não existe.
+    </p>
+  <li>IOException</li>
+  <p>
+    Ocorre por exemplo, quando ocorre um erro de leitura de um arquivo.
+  </p>
+</ul>
+
+
+
+
+<h4>Clausula throws e try/catch</h4>
+
+
+
+
+<figure class='code'><figcaption><span> (Teste.java)</span> <a href='/downloads/code/2015-10-17-java-exceptions/Teste.java'>download</a></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kn">import</span> <span class="nn">java.io.FileInputStream</span><span class="o">;</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">java.io.FileOutputStream</span><span class="o">;</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">java.io.IOException</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Teste</span> <span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span> <span class="n">args</span><span class="o">[])</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
+</span><span class='line'>        <span class="n">FileInputStream</span> <span class="n">in</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+</span><span class='line'>        <span class="n">FileOutputStream</span> <span class="n">out</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="k">try</span> <span class="o">{</span>
+</span><span class='line'>            <span class="n">in</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">FileInputStream</span><span class="o">(</span><span class="s">&quot;input.txt&quot;</span><span class="o">);</span>
+</span><span class='line'>            <span class="n">out</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">FileOutputStream</span><span class="o">(</span><span class="s">&quot;output.txt&quot;</span><span class="o">);</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">);</span>
+</span><span class='line'>        <span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
+</span><span class='line'>            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;finally&quot;</span><span class="o">);</span>
+</span><span class='line'>        <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<ul>
+  <li>Linha 7:</li>
+  <p>
+    A clasula throws é declarada no metodo main, porque uma checked exception esta no corpo do metodo. Tendo a clasula throws, não seria necessário o try/catch.
+  </p>
+  <li>Linhas 11-15:</li>
+  <p>
+    O try circunda o techo de codigo que gera a exception.
+  </p>
+  <li>Linha 15:</li>
+  <p>
+    O catch captura o tipo exception especificado entre parenteses.
+  </p>
+  <li>Linhas 15-17:</li>
+  <p>
+    Corresponde ao bloco entre chaves do catch, que executa as instrucões caso o tipo da exception seja capturado.
+  </p>
+  <li>Linha 17:</li>
+  <p>
+    O finally, irá executar a ultima instrução do try, mesmo que a excessao nao ocorra. Para o finally não executrar, o programa deve ser finalizado, utilizando do try ou do catach por exemplo:  
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="n">System</span><span class="p">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span></code></pre></div>
+ 
+  </p>
+   
+  </ul>
+
+
+
+
+<h4>Observações sobre try/catch:</h4>
+
+
+<ul>
+    <li>
+        Quando se tem o finally, o catch pode ser omitido, e quando se tem o try/catch o finally pode ser omitido. Pelo menos um deles deve existir na clausula try/catch. Fica a critério do programador, de acordo com objetivo do código.
+    </li>
+  <li>
+      Podem existir mais do que um catch, no mesmo try/catch, mas a exception do primeiro deve ser mais generica do que a do segundo, assim por diante. Caso contrario, um erro de compilação ocorre.
+  </li>
+</ul>
+
+
+
+
+<h4>Observações sobre o throws:</h4>
+
+
+<p><ul>
+  <li>
+    Quando um metodo é sobreescrito(overriding), o metodo da classe que estende que efetua a sobreescrita só pode declarar exceptions filhas da exception do metodo sobrescrito.
+  </li></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">CLAUDIO ONOHARA</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2015-10-17T14:55:59-04:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>17</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>2:55 pm</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/java/'>java</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://blog.claudioonohara.eti.br/blog/2015/10/17/java-exceptions/" data-via="" data-counturl="http://blog.claudioonohara.eti.br/blog/2015/10/17/java-exceptions/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2015/09/24/ssd-vs-raid0/" title="Previous Post: SSD vs RAID 0">&laquo; SSD vs RAID 0</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Posts Recentes</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/10/17/java-exceptions/">JAVA Exceptions</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/09/24/ssd-vs-raid0/">SSD vs RAID 0</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/09/22/hello-world-angular/">Hello World! Angular</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+	
+	<h1>Categorias</h1>
+
+<div id="blog-categories">
+  <ul>
+   <li class='category'><a href='/blog/categories/framework-front-end/'>framework front-end (1)</a></li>
+<li class='category'><a href='/blog/categories/hardware/'>hardware (1)</a></li>
+<li class='category'><a href='/blog/categories/java/'>java (1)</a></li>
+
+  </ul>
+</div>
+
+</section>
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><div id="footerline">
+<div id="footer">
+<div class="copyright">
+  Copyright &copy; 2016 - CLAUDIO ONOHARA -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</div>
+  <div class="social">
+        Proudly hosted by
+        <a href="https://github.com">
+          <img src="/images/footer-logo.png" width="100" height="30" alt="GitHub • Social coding">
+        </a>
+  </div>
+  <div style="clear: both"></div>
+</div>
+</div>
+
+
+
+
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'claudioonoharablog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://blog.claudioonohara.eti.br/blog/2015/10/17/java-exceptions/';
+        var disqus_url = 'http://blog.claudioonohara.eti.br/blog/2015/10/17/java-exceptions/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

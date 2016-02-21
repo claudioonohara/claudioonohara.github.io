@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Categoria: Framework Front-end | Programação e Hardware]]></title>
+  <link href="http://blog.claudioonohara.eti.br/blog/categories/framework-front-end/atom.xml" rel="self"/>
+  <link href="http://blog.claudioonohara.eti.br/"/>
+  <updated>2016-02-20T21:04:10-03:00</updated>
+  <id>http://blog.claudioonohara.eti.br/</id>
+  <author>
+    <name><![CDATA[CLAUDIO ONOHARA]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Hello World! Angular]]></title>
+    <link href="http://blog.claudioonohara.eti.br/blog/2015/09/22/hello-world-angular/"/>
+    <updated>2015-09-22T20:18:45-04:00</updated>
+    <id>http://blog.claudioonohara.eti.br/blog/2015/09/22/hello-world-angular</id>
+    <content type="html"><![CDATA[<div> 
+    <p>Segue simples exemplo de uma página com Angular:</p>
+</div>
+
+
+<!-- more -->
+
+
+<p><figure class='code'><figcaption><span> (Hello_Angular.html)</span> <a href='/downloads/code/Hello_Angular.html'>download</a></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;html&gt;</span>
+</span><span class='line'><span class="nt">&lt;body</span> <span class="na">ng-app</span><span class="nt">&gt;</span>
+</span><span class='line'>	<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">ng-model=</span><span class="s">&quot;world&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;World&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>	<span class="nt">&lt;h1&gt;</span>Hello <span class="nt">&lt;span</span> <span class="na">ng-bind=</span><span class="s">&quot;world&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/h1&gt;</span>
+</span><span class='line'>
+</span><span class='line'>	<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'><span class="nt">&lt;/body&gt;</span>
+</span><span class='line'><span class="nt">&lt;/html&gt;</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<h4>Explicando o código:</h4>
+
+
+
+
+<ul>
+  <li>Linha 3:</li>
+   <p>
+     A diretiva ng-app, indica qual parte da pagina será controlada pelo AngularJS.
+  </p>
+  
+  <li>Linha 5:</li>
+   <p>
+     A diretiva ng-model é utilizada para fazer a entrada de usuario (input,select, textarea)
+     ser posteriormente acessível pelas diretivas do angular. A variavel "world" foi criada, e o 
+     valor posteriormente poderá ser acessível através dela.
+  </p>
+
+   <li>Linha 6:</li>
+   <p>
+     A diretiva ng-bind acessa o valor da variavel "world". Para acessar o valor da variavel tambem poderia
+     ter sido utilizada a notação  {{world}} .
+  </p>
+ 
+  <li>Linha 8:</li>
+  <p>
+     O código do angular deve ser importado de alguma maneira para a página. Nesse exemplo, foi utilizado CDN do google.
+  </p>
+
+  <h4>AngularJS</h4>
+  <h5>O que é ?</h5>
+  <p>É um framework Javascript, que utiliza a arquitetura MVC(Model-View-Controller) para organização de suas funcionalidades.
+  </p>
+
+
+</ul>
+
+
+<p></p>
+]]></content>
+  </entry>
+  
+</feed>

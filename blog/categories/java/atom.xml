@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Categoria: Java | Programação e Hardware]]></title>
+  <link href="http://blog.claudioonohara.eti.br/blog/categories/java/atom.xml" rel="self"/>
+  <link href="http://blog.claudioonohara.eti.br/"/>
+  <updated>2016-02-20T21:04:10-03:00</updated>
+  <id>http://blog.claudioonohara.eti.br/</id>
+  <author>
+    <name><![CDATA[CLAUDIO ONOHARA]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[JAVA Exceptions]]></title>
+    <link href="http://blog.claudioonohara.eti.br/blog/2015/10/17/java-exceptions/"/>
+    <updated>2015-10-17T14:55:59-04:00</updated>
+    <id>http://blog.claudioonohara.eti.br/blog/2015/10/17/java-exceptions</id>
+    <content type="html"><![CDATA[<!-- more -->
+
+
+<p><img src="http://blog.claudioonohara.eti.br/images/2015-10-17-java-exceptions/exception_hierarchy_in_java.png" alt="Hierarquia Exception"></p>
+
+<p>Uma exception é um evento que altera o fluxo do programa. E a super classe Throwable representa esses eventos.</p>
+
+
+
+
+<p>As exceptions podem ser divididas em checked e unchecked.</p>
+
+
+
+
+<p>As exceptions do tipo checked, são as exceptions filhas da java.lang.Exception que não estendem a java.lang.RuntimeException.</p>
+
+
+
+
+<p>
+    As exceptions do tipo unchecked, estendem Error e RuntimeException.
+</p>
+
+
+
+
+<h3>Errors</h3>
+
+
+<p>São disparados pela JVM e não devem ser tratados ou declarados pelo programador. Ex:</p>
+
+
+<ul>
+  <li>ExceptionInInitializerError</li>
+  <p>Ocorre quando uma exception acontece dentro de um inicializador estatico. Quando isso ocorre a classe não pode ser usada, o que gera um erro.</p>
+  <li>StackOverflowError</li>
+  <p>
+    Acontece geralmente quando um metodo se chama recursivamente. Cada chamada ao metodo coloca variaveis locais e parametros em uma pilha, que fica sem espaço e transborda(overflow), quando são feitas um grande numero de chamadas.
+  </p>
+  <li>NoClassDefFoundError</li>
+    <p>
+        Esta relacionado geralmete a problemas de classpath.
+    </p>  
+</ul>
+
+
+
+
+<h3>Runtime Exceptions</h3>
+
+
+<p>Podem ser disparados pela JVM e pelo programador. Mas não precisam ser declarados nem tratados pelo programador. Ex:</p>
+
+
+<ul>
+  <li>ArithmeticException</li>
+    <p>
+        Ocorre por exemplo, quando é feito uma tentativa de divisão de um inteiro por zero.
+    </p>
+  <li>ArrayIndexOutOfBoundsException</li>
+    <p>
+        Ocorre por exemplo, quando é feita uma tentativa de acessar um indice de array que nao existe.
+    </p>
+  <li>ClassCastException</li>
+    <p>
+        Ocorre por exemplo, quando é feita uma tentativa de cast de uma variavel string para int, mas a string não é composta por caracteres numericos, tornando o cast impossivel.
+    </p>
+  <li>IllegalArgumentException</li>
+    <p>
+        Ocorre por exemplo, quando se tenta usar uma classe que espera valores positivos como parametro, mas é enviado o valor negativo para ela.
+    </p>
+  <li>NullPointerException</li>
+    <p>
+        Ocorre por exemplo, ao tentar utilizar um metodo de uma variavel de instancia do tipo objeto, mas a variavel ainda não aponta para instancia alguma.
+    </p>
+  <li>NumberFormatException</li>
+  <p>
+    Ocorre por exemplo, quando se tenta transformar(diferente de um cast, aqui se usa por exemplo um parseInt) uma string para inteiro, mas a string não é composta por caracteres numericos. NumberFormatException é uma subclasse de IllegalArgumentException. 
+  </p>
+</ul>
+
+
+
+
+<h3>Checked Exceptions</h3>
+
+
+<p>
+    Podem ser disparados pela JVM ou pelo programador. E devem ser tratadas (try/catch) ou declaradas(throws) pelo programador. Ex:
+</p>
+
+
+<ul>
+  <li>FileNotFoundException</li>
+    <p>
+        Ocorre quando é feita uma tentativa de acesso a um arquivo que não existe.
+    </p>
+  <li>IOException</li>
+  <p>
+    Ocorre por exemplo, quando ocorre um erro de leitura de um arquivo.
+  </p>
+</ul>
+
+
+
+
+<h4>Clausula throws e try/catch</h4>
+
+
+<p><figure class='code'><figcaption><span> (Teste.java)</span> <a href='/downloads/code/2015-10-17-java-exceptions/Teste.java'>download</a></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kn">import</span> <span class="nn">java.io.FileInputStream</span><span class="o">;</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">java.io.FileOutputStream</span><span class="o">;</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">java.io.IOException</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Teste</span> <span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span> <span class="n">args</span><span class="o">[])</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
+</span><span class='line'>        <span class="n">FileInputStream</span> <span class="n">in</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+</span><span class='line'>        <span class="n">FileOutputStream</span> <span class="n">out</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="k">try</span> <span class="o">{</span>
+</span><span class='line'>            <span class="n">in</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">FileInputStream</span><span class="o">(</span><span class="s">&quot;input.txt&quot;</span><span class="o">);</span>
+</span><span class='line'>            <span class="n">out</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">FileOutputStream</span><span class="o">(</span><span class="s">&quot;output.txt&quot;</span><span class="o">);</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">);</span>
+</span><span class='line'>        <span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
+</span><span class='line'>            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;finally&quot;</span><span class="o">);</span>
+</span><span class='line'>        <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<ul>
+  <li>Linha 7:</li>
+  <p>
+    A clasula throws é declarada no metodo main, porque uma checked exception esta no corpo do metodo. Tendo a clasula throws, não seria necessário o try/catch.
+  </p>
+  <li>Linhas 11-15:</li>
+  <p>
+    O try circunda o techo de codigo que gera a exception.
+  </p>
+  <li>Linha 15:</li>
+  <p>
+    O catch captura o tipo exception especificado entre parenteses.
+  </p>
+  <li>Linhas 15-17:</li>
+  <p>
+    Corresponde ao bloco entre chaves do catch, que executa as instrucões caso o tipo da exception seja capturado.
+  </p>
+  <li>Linha 17:</li>
+  <p>
+    O finally, irá executar a ultima instrução do try, mesmo que a excessao nao ocorra. Para o finally não executrar, o programa deve ser finalizado, utilizando do try ou do catach por exemplo:  <div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="n">System</span><span class="p">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span></code></pre></div> 
+  </p>
+   
+  </ul>
+
+
+
+
+<h4>Observações sobre try/catch:</h4>
+
+
+<ul>
+    <li>
+        Quando se tem o finally, o catch pode ser omitido, e quando se tem o try/catch o finally pode ser omitido. Pelo menos um deles deve existir na clausula try/catch. Fica a critério do programador, de acordo com objetivo do código.
+    </li>
+  <li>
+      Podem existir mais do que um catch, no mesmo try/catch, mas a exception do primeiro deve ser mais generica do que a do segundo, assim por diante. Caso contrario, um erro de compilação ocorre.
+  </li>
+</ul>
+
+
+
+
+<h4>Observações sobre o throws:</h4>
+
+
+<p><ul>
+  <li>
+    Quando um metodo é sobreescrito(overriding), o metodo da classe que estende que efetua a sobreescrita só pode declarar exceptions filhas da exception do metodo sobrescrito.
+  </li></p>
+]]></content>
+  </entry>
+  
+</feed>
