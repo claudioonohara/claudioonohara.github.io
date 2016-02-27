@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Categoria: Java | Programação e Hardware]]></title>
-  <link href="http://blog.claudioonohara.eti.br/blog/categories/java/atom.xml" rel="self"/>
-  <link href="http://blog.claudioonohara.eti.br/"/>
-  <updated>2016-02-20T21:04:10-03:00</updated>
-  <id>http://blog.claudioonohara.eti.br/</id>
-  <author>
-    <name><![CDATA[CLAUDIO ONOHARA]]></name>
-    
-  </author>
-  <generator uri="http://octopress.org/">Octopress</generator>
+    <title><![CDATA[Categoria: java | CLAUDIO ONOHARA]]></title>
+    <link href="http://blog.claudioonohara.eti.br/blog/categories/java/atom.xml" rel="self"/>
+    <link href="http://blog.claudioonohara.eti.br/"/>
+    <updated>2016-02-27T16:41:38-04:00</updated>
+    <id>http://blog.claudioonohara.eti.br/</id>
+    <author>
+        <name><![CDATA[CLAUDIO ONOHARA]]></name>
+        <email><![CDATA[claudioonohara@gmail.com]]></email>
+      </author>
+    <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[JAVA Exceptions]]></title>
-    <link href="http://blog.claudioonohara.eti.br/blog/2015/10/17/java-exceptions/"/>
-    <updated>2015-10-17T14:55:59-04:00</updated>
-    <id>http://blog.claudioonohara.eti.br/blog/2015/10/17/java-exceptions</id>
-    <content type="html"><![CDATA[<!-- more -->
+    
+    <entry>
+        <title type="html"><![CDATA[JAVA Exceptions]]></title>
+        <link href="http://blog.claudioonohara.eti.br/blog/2015/10/17/java-exceptions/"/>
+        <updated>2015-10-17T14:55:59-04:00</updated>
+        <id>http://blog.claudioonohara.eti.br/blog/2015/10/17/java-exceptions</id>
+        <content type="html"><![CDATA[<!-- more -->
 
 
 <p><img src="http://blog.claudioonohara.eti.br/images/2015-10-17-java-exceptions/exception_hierarchy_in_java.png" alt="Hierarquia Exception"></p>
@@ -225,6 +225,6 @@
     Quando um metodo é sobreescrito(overriding), o metodo da classe que estende que efetua a sobreescrita só pode declarar exceptions filhas da exception do metodo sobrescrito.
   </li></p>
 ]]></content>
-  </entry>
-  
+    </entry>
+    
 </feed>
