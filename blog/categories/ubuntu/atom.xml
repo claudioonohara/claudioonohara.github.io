@@ -4,7 +4,7 @@
     <title><![CDATA[Categoria: ubuntu | CLAUDIO ONOHARA]]></title>
     <link href="http://blog.claudioonohara.eti.br/blog/categories/ubuntu/atom.xml" rel="self"/>
     <link href="http://blog.claudioonohara.eti.br/"/>
-    <updated>2016-04-03T09:05:57-04:00</updated>
+    <updated>2016-04-03T10:06:30-04:00</updated>
     <id>http://blog.claudioonohara.eti.br/</id>
     <author>
         <name><![CDATA[CLAUDIO ONOHARA]]></name>
@@ -12,6 +12,52 @@
       </author>
     <generator uri="http://octopress.org/">Octopress</generator>
 
+    
+    <entry>
+        <title type="html"><![CDATA[Habilitando o plugin JAVA no Firefox Linux UBUNTU]]></title>
+        <link href="http://blog.claudioonohara.eti.br/blog/2016/04/03/habilitando-o-plugin-java-no-firefox-linux-ubuntu/"/>
+        <updated>2016-04-03T09:31:41-04:00</updated>
+        <id>http://blog.claudioonohara.eti.br/blog/2016/04/03/habilitando-o-plugin-java-no-firefox-linux-ubuntu</id>
+        <content type="html"><![CDATA[<!-- more -->
+
+
+<p> 1 - Criar a pasta de plugins do firefox se não existir.
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo mkdir -p /usr/lib/firefox-addons/plugins</span></code></pre></td></tr></table></div></figure>
+</p>
+
+
+
+
+<p> 2 - Ir até a pasta criada
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd /usr/lib/firefox-addons/plugins</span></code></pre></td></tr></table></div></figure>
+</p>
+
+
+
+
+<p> 3 - Criar um link simbólico da biblioteca java 'libnpjp2.so' dentro da pasta criada
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo ln -s /usr/local/java/jdk1.8.0_77/jre/lib/amd64/libnpjp2.so</span></code></pre></td></tr></table></div></figure>
+</p>
+
+
+
+
+<p> Reiniciar o Firefox e testar clicando neste <a href="https://java.com/en/download/installed8.jsp" target="_blank" >Link</a> . </p>
+
+
+
+
+<p> 
+    <a href="https://java.com/en/download/help/enable_browser_ubuntu.xml" target="_blank" >Fonte: https://java.com/en/download/help/enable_browser_ubuntu.xml</a>
+</p>
+
+
+
+]]></content>
+    </entry>
     
     <entry>
         <title type="html"><![CDATA[Configurando o JAVA (JRE E JDK) no UBUNTU]]></title>
@@ -34,14 +80,17 @@
 </p>
 
 
-<p><p></p>
 
-<p><p> 3 - Descompactar o jdk
+
+<p> 3 - Descompactar o jdk 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>sudo tar -zxvf jdk-8u77-linux-x64.tar.gz</span></code></pre></td></tr></table></div></figure>
-</p></p>
+</p>
 
-<p><p> 4 - Alterar o arquivo &lsquo;/etc/profile&rsquo; adicionando ao final do arquivo(Usar sudo para obter permissão necessária)
+
+
+
+<p> 4 - Alterar o arquivo '/etc/profile' adicionando ao final do arquivo(Usar sudo para obter permissão necessária)
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -56,11 +105,14 @@
 </span><span class='line'>export JAVA_HOME
 </span><span class='line'>export JRE_HOME
 </span><span class='line'>export PATH</span></code></pre></td></tr></table></div></figure>
-</p></p>
+</p>
 
-<p><p> Executar os comandos abaixo para verificar se a configuração realizada funcionou como o esperado.</p>
 
-<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+
+
+<p> Executar os comandos abaixo para verificar se a configuração realizada funcionou como o esperado.
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -69,14 +121,15 @@
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>claudio@dev:~$ java -version
-</span><span class='line'>java version &ldquo;1.8.0_77&rdquo;
-</span><span class='line'>Java&trade; SE Runtime Environment (build 1.8.0_77-b03)
-</span><span class='line'>Java HotSpot&trade; 64-Bit Server VM (build 25.77-b03, mixed mode)
+</span><span class='line'>java version "1.8.0_77"
+</span><span class='line'>Java(TM) SE Runtime Environment (build 1.8.0_77-b03)
+</span><span class='line'>Java HotSpot(TM) 64-Bit Server VM (build 25.77-b03, mixed mode)
 </span><span class='line'>claudio@dev:~$ echo $JAVA_HOME
 </span><span class='line'>/usr/local/java/jdk1.8.0_77/
 </span><span class='line'>claudio@dev:~$ echo $JRE_HOME
 </span><span class='line'>/usr/local/java/jdk1.8.0_77/jre</span></code></pre></td></tr></table></div></figure>
-</p></p>
+</p>
+
 ]]></content>
     </entry>
     

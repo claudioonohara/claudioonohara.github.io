@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+    <title><![CDATA[Categoria: navegadores | CLAUDIO ONOHARA]]></title>
+    <link href="http://blog.claudioonohara.eti.br/blog/categories/navegadores/atom.xml" rel="self"/>
+    <link href="http://blog.claudioonohara.eti.br/"/>
+    <updated>2016-04-03T10:06:30-04:00</updated>
+    <id>http://blog.claudioonohara.eti.br/</id>
+    <author>
+        <name><![CDATA[CLAUDIO ONOHARA]]></name>
+        <email><![CDATA[claudioonohara@gmail.com]]></email>
+      </author>
+    <generator uri="http://octopress.org/">Octopress</generator>
+
+    
+    <entry>
+        <title type="html"><![CDATA[Habilitando o plugin JAVA no Firefox Linux UBUNTU]]></title>
+        <link href="http://blog.claudioonohara.eti.br/blog/2016/04/03/habilitando-o-plugin-java-no-firefox-linux-ubuntu/"/>
+        <updated>2016-04-03T09:31:41-04:00</updated>
+        <id>http://blog.claudioonohara.eti.br/blog/2016/04/03/habilitando-o-plugin-java-no-firefox-linux-ubuntu</id>
+        <content type="html"><![CDATA[<!-- more -->
+
+
+<p> 1 - Criar a pasta de plugins do firefox se não existir.
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo mkdir -p /usr/lib/firefox-addons/plugins</span></code></pre></td></tr></table></div></figure>
+</p>
+
+
+
+
+<p> 2 - Ir até a pasta criada
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd /usr/lib/firefox-addons/plugins</span></code></pre></td></tr></table></div></figure>
+</p>
+
+
+
+
+<p> 3 - Criar um link simbólico da biblioteca java 'libnpjp2.so' dentro da pasta criada
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo ln -s /usr/local/java/jdk1.8.0_77/jre/lib/amd64/libnpjp2.so</span></code></pre></td></tr></table></div></figure>
+</p>
+
+
+
+
+<p> Reiniciar o Firefox e testar clicando neste <a href="https://java.com/en/download/installed8.jsp" target="_blank" >Link</a> . </p>
+
+
+
+
+<p> 
+    <a href="https://java.com/en/download/help/enable_browser_ubuntu.xml" target="_blank" >Fonte: https://java.com/en/download/help/enable_browser_ubuntu.xml</a>
+</p>
+
+
+
+]]></content>
+    </entry>
+    
+</feed>

@@ -12,8 +12,8 @@
         <title>CLAUDIO ONOHARA</title>
         <meta name="author" content="CLAUDIO ONOHARA">
         
-        <meta name="description" content="Analise de hardware framework algoritmos linguagens de programção">
-        
+        <meta name="description" content="Configurando o JAVA(JRE e JDK) no UBUNTU">
+        <meta name="keywords" content="java UBUNTU linux JRE JDK">
         <meta name="viewport" content="width=device-width">
         <link rel="canonical" href="http://blog.claudioonohara.eti.br/blog/2016/04/02/configurando-o-java-jre-e-jdk-no-ubuntu">
 
@@ -138,14 +138,17 @@
 </p>
 
 
-<p><p></p>
 
-<p><p> 3 - Descompactar o jdk
+
+<p> 3 - Descompactar o jdk 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>sudo tar -zxvf jdk-8u77-linux-x64.tar.gz</span></code></pre></td></tr></table></div></figure>
-</p></p>
+</p>
 
-<p><p> 4 - Alterar o arquivo &lsquo;/etc/profile&rsquo; adicionando ao final do arquivo(Usar sudo para obter permissão necessária)
+
+
+
+<p> 4 - Alterar o arquivo '/etc/profile' adicionando ao final do arquivo(Usar sudo para obter permissão necessária)
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -160,11 +163,14 @@
 </span><span class='line'>export JAVA_HOME
 </span><span class='line'>export JRE_HOME
 </span><span class='line'>export PATH</span></code></pre></td></tr></table></div></figure>
-</p></p>
+</p>
 
-<p><p> Executar os comandos abaixo para verificar se a configuração realizada funcionou como o esperado.</p>
 
-<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+
+
+<p> Executar os comandos abaixo para verificar se a configuração realizada funcionou como o esperado.
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -173,14 +179,15 @@
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>claudio@dev:~$ java -version
-</span><span class='line'>java version &ldquo;1.8.0_77&rdquo;
-</span><span class='line'>Java&trade; SE Runtime Environment (build 1.8.0_77-b03)
-</span><span class='line'>Java HotSpot&trade; 64-Bit Server VM (build 25.77-b03, mixed mode)
+</span><span class='line'>java version "1.8.0_77"
+</span><span class='line'>Java(TM) SE Runtime Environment (build 1.8.0_77-b03)
+</span><span class='line'>Java HotSpot(TM) 64-Bit Server VM (build 25.77-b03, mixed mode)
 </span><span class='line'>claudio@dev:~$ echo $JAVA_HOME
 </span><span class='line'>/usr/local/java/jdk1.8.0_77/
 </span><span class='line'>claudio@dev:~$ echo $JRE_HOME
 </span><span class='line'>/usr/local/java/jdk1.8.0_77/jre</span></code></pre></td></tr></table></div></figure>
-</p></p>
+</p>
+
 
 
 
@@ -232,6 +239,10 @@
     <ul class="divided">
         
         <li class="post">
+            <a href="/blog/2016/04/03/habilitando-o-plugin-java-no-firefox-linux-ubuntu/">Habilitando o plugin JAVA no Firefox Linux UBUNTU</a>
+        </li>
+        
+        <li class="post">
             <a href="/blog/2016/04/02/configurando-o-java-jre-e-jdk-no-ubuntu/">Configurando o JAVA (JRE E JDK) no UBUNTU</a>
         </li>
         
@@ -257,8 +268,9 @@
   <ul>
    <li class='category'><a href='/blog/categories/framework-front-end/'>framework front-end (1)</a></li>
 <li class='category'><a href='/blog/categories/hardware/'>hardware (1)</a></li>
-<li class='category'><a href='/blog/categories/java/'>java (2)</a></li>
-<li class='category'><a href='/blog/categories/ubuntu/'>ubuntu (1)</a></li>
+<li class='category'><a href='/blog/categories/java/'>java (3)</a></li>
+<li class='category'><a href='/blog/categories/navegadores/'>navegadores (1)</a></li>
+<li class='category'><a href='/blog/categories/ubuntu/'>ubuntu (2)</a></li>
 
   </ul>
 </div>
