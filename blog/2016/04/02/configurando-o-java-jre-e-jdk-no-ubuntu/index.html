@@ -15,7 +15,7 @@
         <meta name="description" content="Analise de hardware framework algoritmos linguagens de programção">
         
         <meta name="viewport" content="width=device-width">
-        <link rel="canonical" href="http://blog.claudioonohara.eti.br/blog/2015/09/24/ssd-vs-raid0">
+        <link rel="canonical" href="http://blog.claudioonohara.eti.br/blog/2016/04/02/configurando-o-java-jre-e-jdk-no-ubuntu">
 
         <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic' rel='stylesheet' type='text/css'>
         <link href="http://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css">
@@ -80,7 +80,7 @@
                     <article class="article article--single">
     <header class="article__header">
     
-        <h1 class="article__title">SSD vs RAID 0</h1>
+        <h1 class="article__title">Configurando o JAVA (JRE E JDK) no UBUNTU</h1>
     
 
     
@@ -92,7 +92,7 @@
 
 
 
-    <time class="article__date pull-left" datetime="2015-09-24T22:49:16-04:00" pubdate><i class="fa fa-calendar"></i> Sep 24th, 2015</time>
+    <time class="article__date pull-left" datetime="2016-04-02T22:37:04-04:00" pubdate><i class="fa fa-calendar"></i> Apr 2nd, 2016</time>
 
 
 
@@ -105,7 +105,7 @@
         
 
             
-                <li><a class='category' href='/blog/categories/hardware/'>hardware</a></li>
+                <li><a class='category' href='/blog/categories/ubuntu/'>ubuntu</a></li>
             
         
         </ul>
@@ -120,68 +120,65 @@
 
 
 
-    <p>Só para curiosidade segue testes efetuados com discos ligados em RAID 0 e um disco SSD  </p>
+    <!-- more -->
+
+
+<p>
+1 - Baixar a versão de JDK desejada em: <a href="http://www.oracle.com/technetwork/pt/java/javase/downloads/index.html" target="_blank" >Downloads Oracle</a> 
+</p>
 
 
 
 
-<h3>SSD</h3>
+<p> 2 - Mover o jdk baixado para '/usr/local/java/'
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>mv jdk-8u77-linux-x64.tar.gz /usr/local/java/</span></code></pre></td></tr></table></div></figure>
+</p>
 
 
-<!-- more -->
+<p><p></p>
 
+<p><p> 3 - Descompactar o jdk
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo tar -zxvf jdk-8u77-linux-x64.tar.gz</span></code></pre></td></tr></table></div></figure>
+</p></p>
 
-<h4>INFO:</h4>
+<p><p> 4 - Alterar o arquivo &lsquo;/etc/profile&rsquo; adicionando ao final do arquivo(Usar sudo para obter permissão necessária)
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>JAVA_HOME=/usr/local/java/jdk1.8.0_77/
+</span><span class='line'>PATH=$PATH:$HOME/bin:$JAVA_HOME/bin
+</span><span class='line'>JRE_HOME=/usr/local/java/jdk1.8.0_77/jre
+</span><span class='line'>PATH=$PATH:$HOME/bin:$JRE_HOME/bin
+</span><span class='line'>export JAVA_HOME
+</span><span class='line'>export JRE_HOME
+</span><span class='line'>export PATH</span></code></pre></td></tr></table></div></figure>
+</p></p>
 
+<p><p>Ao reiniciar o sistema realizar o comando abaixo deve-se obter a saida do JRE com a versão baixada.</p>
 
-<ul>
-  <li>OS: UBUNTU 14.04</li>
-  <li>FS: EXT4</li>
-</ul>
-
-
-
-
-<blockquote><p>Model=Samsung SSD 840 EVO 250GB, FwRev=EXT0DB6Q<br/> Config={ Fixed }<br/> RawCHS=16383/16/63, TrkSize=0, SectSize=0, ECCbytes=0<br/> BuffType=unknown, BuffSize=unknown, MaxMultSect=1, MultSect=1<br/> CurCHS=16383/16/63, CurSects=16514064, LBA=yes, LBAsects=488397168<br/> IORDY=on/off, tPIO={min:120,w/IORDY:120}, tDMA={min:120,rec:120}<br/> PIO modes:  pio0 pio1 pio2 pio3 pio4 <br/> DMA modes:  mdma0 mdma1 mdma2 <br/> UDMA modes: udma0 udma1 udma2 udma3 udma4 udma5 *udma6 <br/> AdvancedPM=no WriteCache=enabled<br/> Drive conforms to: unknown:  ATA/ATAPI-2,3,4,5,6,7</p></blockquote>
-
-
-<p> <h4>HDPARM TESTE:</h4></p>
-
-<blockquote><p>????@dev:~# hdparm -t /dev/sda1</p><p>/dev/sda1:<br/> Timing buffered disk reads: 1542 MB in  3.00 seconds = 513.76 MB/sec</p></blockquote>
-
-
-<p> <h3>RAID 0</h3></p>
-
-<h4>INFO:</h4>
-
-
-<ul>
-  <li>OS: UBUNTU 14.04</li>
-  <li>FS: EXT4</li>
-  <li>RAID 0 efetuado pela placa-mãe ASUS P5WDH-DELUXE(STRIP:128KB)</li>
-  <li>2 X SAMSUNG Spinpoint F1 HD322HJ 320GB 7200 RPM 16MB Cache SATA 3.0Gb/s 3.5"</li>
-</ul>
-
-
-<p> <h4>HDPARM TESTE:</h4></p>
-
-<blockquote><p>????@dev:~# hdparm -t /dev/mapper/isw_deefcbeej_raidlinux1</p><p>/dev/mapper/isw_deefcbeej_raidlinux1:<br/> Timing buffered disk reads: 652 MB in  3.00 seconds = 217.17 MB/sec</p></blockquote>
-
-
-
-
-<h4>ANALISE:</h4>
-
-
-<p>O SSD apesar de ser um tipo de hardware mais novo, foi melhor reconhecido pelo sistema operacional UBUNTU. Digo
-isso, porque utilizando o mesmo hardware no Windows 7(para testes foi utilizado o hdtach)
-o resultado obtido para o SSD foi praticamente igual, já para o RAID 0, leitura ficou na casa dos 300MB/sec .</p>
-
-
-<p>O conjunto de hardware necessário para realizar o RAID 0 atualmente ainda é mais barato,
-e possui um custo por GB muito mais barato, mas possui um desempenho menor que um SSD e a controladora RAID pode não ser
-reconhecida pelo sistema operacional escolhido.</p>
-
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>claudio@dev:~$ java -version
+</span><span class='line'>java version &ldquo;1.8.0_77&rdquo;
+</span><span class='line'>Java&trade; SE Runtime Environment (build 1.8.0_77-b03)
+</span><span class='line'>Java HotSpot&trade; 64-Bit Server VM (build 25.77-b03, mixed mode)
+</span><span class='line'>claudio@dev:~$ echo $JAVA_HOME
+</span><span class='line'>/usr/local/java/jdk1.8.0_77/
+</span><span class='line'>claudio@dev:~$ echo $JRE_HOME
+</span><span class='line'>/usr/local/java/jdk1.8.0_77/jre</span></code></pre></td></tr></table></div></figure>
+</p></p>
 
 
 
@@ -348,8 +345,8 @@ reconhecida pelo sistema operacional escolhido.</p>
     
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://blog.claudioonohara.eti.br/blog/2015/09/24/ssd-vs-raid0/';
-        var disqus_url = 'http://blog.claudioonohara.eti.br/blog/2015/09/24/ssd-vs-raid0/';
+        var disqus_identifier = 'http://blog.claudioonohara.eti.br/blog/2016/04/02/configurando-o-java-jre-e-jdk-no-ubuntu/';
+        var disqus_url = 'http://blog.claudioonohara.eti.br/blog/2016/04/02/configurando-o-java-jre-e-jdk-no-ubuntu/';
         var disqus_script = 'embed.js';
     
     (function () {

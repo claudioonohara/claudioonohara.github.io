@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://blog.claudioonohara.eti.br/blog/2016/04/02/configurando-o-java-jre-e-jdk-no-ubuntu/</loc>
+    <lastmod>2016-04-02T22:37:04-04:00</lastmod>
+  </url>
+  <url>
     <loc>http://blog.claudioonohara.eti.br/blog/2015/10/17/java-exceptions/</loc>
     <lastmod>2015-10-17T14:55:59-04:00</lastmod>
   </url>
@@ -35,6 +39,9 @@
   </url>
   <url>
     <loc>http://blog.claudioonohara.eti.br/blog/categories/java/</loc>
+  </url>
+  <url>
+    <loc>http://blog.claudioonohara.eti.br/blog/categories/ubuntu/</loc>
   </url>
   <url>
     <loc>http://blog.claudioonohara.eti.br/downloads/code/2015-10-12-estrutura-basica-angularjs/index.html</loc>
