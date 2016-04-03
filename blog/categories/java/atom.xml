@@ -4,7 +4,7 @@
     <title><![CDATA[Categoria: java | CLAUDIO ONOHARA]]></title>
     <link href="http://blog.claudioonohara.eti.br/blog/categories/java/atom.xml" rel="self"/>
     <link href="http://blog.claudioonohara.eti.br/"/>
-    <updated>2016-04-03T01:18:25-04:00</updated>
+    <updated>2016-04-03T01:25:10-04:00</updated>
     <id>http://blog.claudioonohara.eti.br/</id>
     <author>
         <name><![CDATA[CLAUDIO ONOHARA]]></name>
@@ -12,6 +12,73 @@
       </author>
     <generator uri="http://octopress.org/">Octopress</generator>
 
+    
+    <entry>
+        <title type="html"><![CDATA[Configurando o JAVA (JRE E JDK) no UBUNTU]]></title>
+        <link href="http://blog.claudioonohara.eti.br/blog/2016/04/02/configurando-o-java-jre-e-jdk-no-ubuntu/"/>
+        <updated>2016-04-02T22:37:04-04:00</updated>
+        <id>http://blog.claudioonohara.eti.br/blog/2016/04/02/configurando-o-java-jre-e-jdk-no-ubuntu</id>
+        <content type="html"><![CDATA[<!-- more -->
+
+
+<p>
+1 - Baixar a versão de JDK desejada em: <a href="http://www.oracle.com/technetwork/pt/java/javase/downloads/index.html" target="_blank" >Downloads Oracle</a> 
+</p>
+
+
+
+
+<p> 2 - Mover o jdk baixado para '/usr/local/java/'
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>mv jdk-8u77-linux-x64.tar.gz /usr/local/java/</span></code></pre></td></tr></table></div></figure>
+</p>
+
+
+<p><p></p>
+
+<p><p> 3 - Descompactar o jdk
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo tar -zxvf jdk-8u77-linux-x64.tar.gz</span></code></pre></td></tr></table></div></figure>
+</p></p>
+
+<p><p> 4 - Alterar o arquivo &lsquo;/etc/profile&rsquo; adicionando ao final do arquivo(Usar sudo para obter permissão necessária)
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>JAVA_HOME=/usr/local/java/jdk1.8.0_77/
+</span><span class='line'>PATH=$PATH:$HOME/bin:$JAVA_HOME/bin
+</span><span class='line'>JRE_HOME=/usr/local/java/jdk1.8.0_77/jre
+</span><span class='line'>PATH=$PATH:$HOME/bin:$JRE_HOME/bin
+</span><span class='line'>export JAVA_HOME
+</span><span class='line'>export JRE_HOME
+</span><span class='line'>export PATH</span></code></pre></td></tr></table></div></figure>
+</p></p>
+
+<p><p>Ao reiniciar o sistema realizar o comando abaixo deve-se obter a saida do JRE com a versão baixada.</p>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>claudio@dev:~$ java -version
+</span><span class='line'>java version &ldquo;1.8.0_77&rdquo;
+</span><span class='line'>Java&trade; SE Runtime Environment (build 1.8.0_77-b03)
+</span><span class='line'>Java HotSpot&trade; 64-Bit Server VM (build 25.77-b03, mixed mode)
+</span><span class='line'>claudio@dev:~$ echo $JAVA_HOME
+</span><span class='line'>/usr/local/java/jdk1.8.0_77/
+</span><span class='line'>claudio@dev:~$ echo $JRE_HOME
+</span><span class='line'>/usr/local/java/jdk1.8.0_77/jre</span></code></pre></td></tr></table></div></figure>
+</p></p>
+]]></content>
+    </entry>
     
     <entry>
         <title type="html"><![CDATA[JAVA Exceptions]]></title>
