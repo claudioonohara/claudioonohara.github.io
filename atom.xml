@@ -4,7 +4,7 @@
     <title><![CDATA[CLAUDIO ONOHARA]]></title>
     <link href="http://blog.claudioonohara.eti.br/atom.xml" rel="self"/>
     <link href="http://blog.claudioonohara.eti.br/"/>
-    <updated>2016-04-03T10:29:06-04:00</updated>
+    <updated>2016-04-03T11:06:31-04:00</updated>
     <id>http://blog.claudioonohara.eti.br/</id>
     <author>
         <name><![CDATA[CLAUDIO ONOHARA]]></name>
@@ -12,6 +12,46 @@
     </author>
     <generator uri="http://octopress.org/">Octopress</generator>
 
+    
+    <entry>
+        <title type="html"><![CDATA[Netbeans default JDK linux]]></title>
+        <link href="http://blog.claudioonohara.eti.br/blog/2016/04/03/netbeans-default-jdk-linux/"/>
+        <updated>2016-04-03T10:46:44-04:00</updated>
+        <id>http://blog.claudioonohara.eti.br/blog/2016/04/03/netbeans-default-jdk-linux</id>
+        <content type="html"><![CDATA[<!-- more -->
+
+
+<p> 1 - Editar o arquivo 'netbeans.conf' que está localizado dentro da pasta de arquivos do Netbeans. 
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>nano /home/usuario/netbeans-8.0.2/etc/netbeans.conf</span></code></pre></td></tr></table></div></figure>
+</p>
+
+
+
+
+<p> 2 - Configurar o parametro  "netbeans_jdkhome" do arquivo 'netbeans.conf' para o jdk desejado:
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>netbeans_jdkhome="/usr/local/java/jdk1.8.0_77"</span></code></pre></td></tr></table></div></figure>
+</p>
+
+
+
+
+<p> 3 - Renicie o Netbeans para verificar o resultado.
+<img src="http://blog.claudioonohara.eti.br/images/netbeans-default-jdk-linux/netbeans_default_jdk.png" title="&#34;Default JDK alterado com sucesso!&#34;" alt="&#34;Default JDK alterado com sucesso!&#34;">
+</p>
+
+
+
+
+<p> 
+    <a href="http://stackoverflow.com/questions/2809366/changing-java-platform-on-which-netbeans-runs" target="_blank" >Fonte</a>
+</p>
+
+
+
+]]></content>
+    </entry>
     
     <entry>
         <title type="html"><![CDATA[Habilitando o plugin JAVA no Firefox Linux UBUNTU]]></title>

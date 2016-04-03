@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://blog.claudioonohara.eti.br/blog/2016/04/03/netbeans-default-jdk-linux/</loc>
+    <lastmod>2016-04-03T10:46:44-04:00</lastmod>
+  </url>
+  <url>
     <loc>http://blog.claudioonohara.eti.br/blog/2016/04/03/habilitando-o-plugin-java-no-firefox-linux-ubuntu/</loc>
     <lastmod>2016-04-03T09:31:41-04:00</lastmod>
   </url>
@@ -49,6 +53,12 @@
   </url>
   <url>
     <loc>http://blog.claudioonohara.eti.br/blog/categories/navegadores/</loc>
+  </url>
+  <url>
+    <loc>http://blog.claudioonohara.eti.br/blog/categories/linux/</loc>
+  </url>
+  <url>
+    <loc>http://blog.claudioonohara.eti.br/blog/categories/ide/</loc>
   </url>
   <url>
     <loc>http://blog.claudioonohara.eti.br/downloads/code/2015-10-12-estrutura-basica-angularjs/index.html</loc>

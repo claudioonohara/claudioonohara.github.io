@@ -12,10 +12,10 @@
         <title>CLAUDIO ONOHARA</title>
         <meta name="author" content="CLAUDIO ONOHARA">
         
-        <meta name="description" content="Configurando o JAVA(JRE e JDK) no UBUNTU">
-        <meta name="keywords" content="java UBUNTU linux JRE JDK">
+        <meta name="description" content="Default JDK Netbeans Linux">
+        <meta name="keywords" content="JAVA ubuntu linux Netbeans JDK">
         <meta name="viewport" content="width=device-width">
-        <link rel="canonical" href="http://blog.claudioonohara.eti.br/blog/2016/04/02/configurando-o-java-jre-e-jdk-no-ubuntu">
+        <link rel="canonical" href="http://blog.claudioonohara.eti.br/blog/2016/04/03/netbeans-default-jdk-linux">
 
         <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic' rel='stylesheet' type='text/css'>
         <link href="http://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css">
@@ -80,7 +80,7 @@
                     <article class="article article--single">
     <header class="article__header">
     
-        <h1 class="article__title">Configurando o JAVA (JRE E JDK) no UBUNTU</h1>
+        <h1 class="article__title">Netbeans default JDK linux</h1>
     
 
     
@@ -92,7 +92,7 @@
 
 
 
-    <time class="article__date pull-left" datetime="2016-04-02T22:37:04-04:00" pubdate><i class="fa fa-calendar"></i> Apr 2nd, 2016</time>
+    <time class="article__date pull-left" datetime="2016-04-03T10:46:44-04:00" pubdate><i class="fa fa-calendar"></i> Apr 3rd, 2016</time>
 
 
 
@@ -105,7 +105,9 @@
         
 
             
-                <li><a class='category' href='/blog/categories/ubuntu/'>ubuntu</a></li>
+                <li><a class='category' href='/blog/categories/linux/'>linux</a></li>
+            
+                <li><a class='category' href='/blog/categories/ide/'>ide</a></li>
             
                 <li><a class='category' href='/blog/categories/java/'>java</a></li>
             
@@ -125,68 +127,34 @@
     <!-- more -->
 
 
-<p>
-1 - Baixar a versão de JDK desejada em: <a href="http://www.oracle.com/technetwork/pt/java/javase/downloads/index.html" target="_blank" >Downloads Oracle</a> 
-</p>
-
-
-
-
-<p> 2 - Mover o jdk baixado para '/usr/local/java/'
+<p> 1 - Editar o arquivo 'netbeans.conf' que está localizado dentro da pasta de arquivos do Netbeans. 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo mv jdk-8u77-linux-x64.tar.gz /usr/local/java/</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>nano /home/usuario/netbeans-8.0.2/etc/netbeans.conf</span></code></pre></td></tr></table></div></figure>
 </p>
 
 
 
 
-<p> 3 - Descompactar o jdk 
+<p> 2 - Configurar o parametro  "netbeans_jdkhome" do arquivo 'netbeans.conf' para o jdk desejado:
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo tar -zxvf jdk-8u77-linux-x64.tar.gz</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>netbeans_jdkhome="/usr/local/java/jdk1.8.0_77"</span></code></pre></td></tr></table></div></figure>
 </p>
 
 
 
 
-<p> 4 - Alterar o arquivo '/etc/profile' adicionando ao final do arquivo(Usar sudo para obter permissão necessária)
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>JAVA_HOME=/usr/local/java/jdk1.8.0_77/
-</span><span class='line'>PATH=$PATH:$HOME/bin:$JAVA_HOME/bin
-</span><span class='line'>JRE_HOME=/usr/local/java/jdk1.8.0_77/jre
-</span><span class='line'>PATH=$PATH:$HOME/bin:$JRE_HOME/bin
-</span><span class='line'>export JAVA_HOME
-</span><span class='line'>export JRE_HOME
-</span><span class='line'>export PATH</span></code></pre></td></tr></table></div></figure>
+<p> 3 - Renicie o Netbeans para verificar o resultado.
+<img src="/images/netbeans-default-jdk-linux/netbeans_default_jdk.png" title="&#34;Default JDK alterado com sucesso!&#34;" alt="&#34;Default JDK alterado com sucesso!&#34;">
 </p>
 
 
 
 
-<p> Executar os comandos abaixo para verificar se a configuração realizada funcionou como o esperado.
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>claudio@dev:~$ java -version
-</span><span class='line'>java version "1.8.0_77"
-</span><span class='line'>Java(TM) SE Runtime Environment (build 1.8.0_77-b03)
-</span><span class='line'>Java HotSpot(TM) 64-Bit Server VM (build 25.77-b03, mixed mode)
-</span><span class='line'>claudio@dev:~$ echo $JAVA_HOME
-</span><span class='line'>/usr/local/java/jdk1.8.0_77/
-</span><span class='line'>claudio@dev:~$ echo $JRE_HOME
-</span><span class='line'>/usr/local/java/jdk1.8.0_77/jre</span></code></pre></td></tr></table></div></figure>
+<p> 
+    <a href="http://stackoverflow.com/questions/2809366/changing-java-platform-on-which-netbeans-runs" target="_blank" >Fonte</a>
 </p>
+
+
 
 
 
@@ -361,8 +329,8 @@
     
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://blog.claudioonohara.eti.br/blog/2016/04/02/configurando-o-java-jre-e-jdk-no-ubuntu/';
-        var disqus_url = 'http://blog.claudioonohara.eti.br/blog/2016/04/02/configurando-o-java-jre-e-jdk-no-ubuntu/';
+        var disqus_identifier = 'http://blog.claudioonohara.eti.br/blog/2016/04/03/netbeans-default-jdk-linux/';
+        var disqus_url = 'http://blog.claudioonohara.eti.br/blog/2016/04/03/netbeans-default-jdk-linux/';
         var disqus_script = 'embed.js';
     
     (function () {
