@@ -25,13 +25,13 @@
     <lastmod>2015-09-22T20:18:45-04:00</lastmod>
   </url>
   <url>
-    <loc>http://blog.claudioonohara.eti.br/blog/archives/</loc>
-  </url>
-  <url>
-    <loc>http://blog.claudioonohara.eti.br/blog/</loc>
-  </url>
-  <url>
     <loc>http://blog.claudioonohara.eti.br/</loc>
+  </url>
+  <url>
+    <loc>http://blog.claudioonohara.eti.br/posts/archives/</loc>
+  </url>
+  <url>
+    <loc>http://blog.claudioonohara.eti.br/posts/</loc>
   </url>
   <url>
     <loc>http://blog.claudioonohara.eti.br/projetos/</loc>
@@ -40,25 +40,25 @@
     <loc>http://blog.claudioonohara.eti.br/contato/</loc>
   </url>
   <url>
-    <loc>http://blog.claudioonohara.eti.br/blog/categories/framework-front-end/</loc>
+    <loc>http://blog.claudioonohara.eti.br/posts/categories/framework-front-end/</loc>
   </url>
   <url>
-    <loc>http://blog.claudioonohara.eti.br/blog/categories/hardware/</loc>
+    <loc>http://blog.claudioonohara.eti.br/posts/categories/hardware/</loc>
   </url>
   <url>
-    <loc>http://blog.claudioonohara.eti.br/blog/categories/java/</loc>
+    <loc>http://blog.claudioonohara.eti.br/posts/categories/java/</loc>
   </url>
   <url>
-    <loc>http://blog.claudioonohara.eti.br/blog/categories/ubuntu/</loc>
+    <loc>http://blog.claudioonohara.eti.br/posts/categories/ubuntu/</loc>
   </url>
   <url>
-    <loc>http://blog.claudioonohara.eti.br/blog/categories/navegadores/</loc>
+    <loc>http://blog.claudioonohara.eti.br/posts/categories/navegadores/</loc>
   </url>
   <url>
-    <loc>http://blog.claudioonohara.eti.br/blog/categories/linux/</loc>
+    <loc>http://blog.claudioonohara.eti.br/posts/categories/linux/</loc>
   </url>
   <url>
-    <loc>http://blog.claudioonohara.eti.br/blog/categories/ide/</loc>
+    <loc>http://blog.claudioonohara.eti.br/posts/categories/ide/</loc>
   </url>
   <url>
     <loc>http://blog.claudioonohara.eti.br/downloads/code/2015-10-12-estrutura-basica-angularjs/index.html</loc>
