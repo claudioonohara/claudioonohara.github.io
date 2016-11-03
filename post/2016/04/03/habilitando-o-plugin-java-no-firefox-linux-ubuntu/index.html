@@ -12,10 +12,10 @@
         <title>CLAUDIO ONOHARA</title>
         <meta name="author" content="CLAUDIO ONOHARA">
         
-        <meta name="description" content="Analise de hardware framework algoritmos linguagens de programção">
-        
+        <meta name="description" content="Configurando o plugin JAVA no Mozilla Firefox UBUNTU">
+        <meta name="keywords" content="JAVA ubuntu firefox">
         <meta name="viewport" content="width=device-width">
-        <link rel="canonical" href="http://blog.claudioonohara.eti.br/blog/2015/09/22/hello-world-angular">
+        <link rel="canonical" href="http://blog.claudioonohara.eti.br/post/2016/04/03/habilitando-o-plugin-java-no-firefox-linux-ubuntu">
 
         <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic' rel='stylesheet' type='text/css'>
         <link href="http://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css">
@@ -40,7 +40,7 @@
     <label for="toggle" class="toggle" data-open="Menu" data-close="Fechar Menu"></label>
     <ul class="menu">
     <li><a href="/">Home</a></li>
-    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/blog/">Posts</a></li>
     <li><a href="/projetos">Apps</a></li>
     <li><a href="/contato">Contato</a></li>
 </ul>
@@ -80,7 +80,7 @@
                     <article class="article article--single">
     <header class="article__header">
     
-        <h1 class="article__title">Hello World! Angular</h1>
+        <h1 class="article__title">Habilitando o plugin JAVA no Firefox Linux UBUNTU</h1>
     
 
     
@@ -92,7 +92,7 @@
 
 
 
-    <time class="article__date pull-left" datetime="2015-09-22T20:18:45-04:00" pubdate><i class="fa fa-calendar"></i> Sep 22nd, 2015</time>
+    <time class="article__date pull-left" datetime="2016-04-03T09:31:41-04:00" pubdate><i class="fa fa-calendar"></i> Apr 3rd, 2016</time>
 
 
 
@@ -105,7 +105,11 @@
         
 
             
-                <li><a class='category' href='/blog/categories/framework-front-end/'>framework front-end</a></li>
+                <li><a class='category' href='/blog/categories/ubuntu/'>ubuntu</a></li>
+            
+                <li><a class='category' href='/blog/categories/java/'>java</a></li>
+            
+                <li><a class='category' href='/blog/categories/navegadores/'>navegadores</a></li>
             
         
         </ul>
@@ -120,79 +124,44 @@
 
 
 
-    <div> 
-    <p>Segue simples exemplo de uma página com Angular:</p>
-</div>
+    <!-- more -->
 
 
-<!-- more -->
-
-
-<figure class='code'><figcaption><span> (Hello_Angular.html)</span> <a href='/downloads/code/Hello_Angular.html'>download</a></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="cp">&lt;!DOCTYPE html&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nt">&lt;html&gt;</span>
-</span><span class='line'><span class="nt">&lt;body</span> <span class="na">ng-app</span><span class="nt">&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">ng-model=</span><span class="s">&quot;world&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;World&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;h1&gt;</span>Hello <span class="nt">&lt;span</span> <span class="na">ng-bind=</span><span class="s">&quot;world&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/h1&gt;</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-</span><span class='line'><span class="nt">&lt;/body&gt;</span>
-</span><span class='line'><span class="nt">&lt;/html&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
+<p> 1 - Criar a pasta de plugins do firefox se não existir.
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo mkdir -p /usr/lib/firefox-addons/plugins</span></code></pre></td></tr></table></div></figure>
+</p>
 
 
 
 
-<h4>Explicando o código:</h4>
+<p> 2 - Ir até a pasta criada
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd /usr/lib/firefox-addons/plugins</span></code></pre></td></tr></table></div></figure>
+</p>
 
 
 
 
-<ul>
-  <li>Linha 3:</li>
-   <p>
-     A diretiva ng-app, indica qual parte da pagina será controlada pelo AngularJS.
-  </p>
-  
-  <li>Linha 5:</li>
-   <p>
-     A diretiva ng-model é utilizada para fazer a entrada de usuario (input,select, textarea)
-     ser posteriormente acessível pelas diretivas do angular. A variavel "world" foi criada, e o 
-     valor posteriormente poderá ser acessível através dela.
-  </p>
-
-   <li>Linha 6:</li>
-   <p>
-     A diretiva ng-bind acessa o valor da variavel "world". Para acessar o valor da variavel tambem poderia
-     ter sido utilizada a notação  {{world}} .
-  </p>
- 
-  <li>Linha 8:</li>
-  <p>
-     O código do angular deve ser importado de alguma maneira para a página. Nesse exemplo, foi utilizado CDN do google.
-  </p>
-
-  <h4>AngularJS</h4>
-  <h5>O que é ?</h5>
-  <p>É um framework Javascript, que utiliza a arquitetura MVC(Model-View-Controller) para organização de suas funcionalidades.
-  </p>
+<p> 3 - Criar um link simbólico da biblioteca java 'libnpjp2.so' dentro da pasta criada
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo ln -s /usr/local/java/jdk1.8.0_77/jre/lib/amd64/libnpjp2.so</span></code></pre></td></tr></table></div></figure>
+</p>
 
 
-</ul>
 
 
-<p></p>
+<p> Reiniciar o Firefox e testar clicando neste <a href="https://java.com/en/download/installed8.jsp" target="_blank" >Link</a> . </p>
+
+
+<p><img src="/images/habilitando-o-plugin-java-no-firefox-linux-ubuntu/plugin_instalado.png" title="&#34;Plugin Instalado com Sucesso!&#34;" alt="&#34;Plugin Instalado com Sucesso!&#34;"></p>
+
+<p> 
+    <a href="https://java.com/en/download/help/enable_browser_ubuntu.xml" target="_blank" >Fonte</a>
+</p>
+
+
+
 
 
 
@@ -244,23 +213,23 @@
     <ul class="divided">
         
         <li class="post">
-            <a href="/blog/2016/04/03/netbeans-default-jdk-linux/">Netbeans default JDK linux</a>
+            <a href="/post/2016/04/03/netbeans-default-jdk-linux/">Netbeans default JDK linux</a>
         </li>
         
         <li class="post">
-            <a href="/blog/2016/04/03/habilitando-o-plugin-java-no-firefox-linux-ubuntu/">Habilitando o plugin JAVA no Firefox Linux UBUNTU</a>
+            <a href="/post/2016/04/03/habilitando-o-plugin-java-no-firefox-linux-ubuntu/">Habilitando o plugin JAVA no Firefox Linux UBUNTU</a>
         </li>
         
         <li class="post">
-            <a href="/blog/2016/04/02/configurando-o-java-jre-e-jdk-no-ubuntu/">Configurando o JAVA (JRE E JDK) no UBUNTU</a>
+            <a href="/post/2016/04/02/configurando-o-java-jre-e-jdk-no-ubuntu/">Configurando o JAVA (JRE E JDK) no UBUNTU</a>
         </li>
         
         <li class="post">
-            <a href="/blog/2015/10/17/java-exceptions/">JAVA Exceptions</a>
+            <a href="/post/2015/10/17/java-exceptions/">JAVA Exceptions</a>
         </li>
         
         <li class="post">
-            <a href="/blog/2015/09/24/ssd-vs-raid0/">SSD vs RAID 0</a>
+            <a href="/post/2015/09/24/ssd-vs-raid0/">SSD vs RAID 0</a>
         </li>
         
     </ul>
@@ -365,8 +334,8 @@
     
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://blog.claudioonohara.eti.br/blog/2015/09/22/hello-world-angular/';
-        var disqus_url = 'http://blog.claudioonohara.eti.br/blog/2015/09/22/hello-world-angular/';
+        var disqus_identifier = 'http://blog.claudioonohara.eti.br/post/2016/04/03/habilitando-o-plugin-java-no-firefox-linux-ubuntu/';
+        var disqus_url = 'http://blog.claudioonohara.eti.br/post/2016/04/03/habilitando-o-plugin-java-no-firefox-linux-ubuntu/';
         var disqus_script = 'embed.js';
     
     (function () {

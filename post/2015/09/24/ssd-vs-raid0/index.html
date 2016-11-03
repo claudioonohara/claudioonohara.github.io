@@ -12,10 +12,10 @@
         <title>CLAUDIO ONOHARA</title>
         <meta name="author" content="CLAUDIO ONOHARA">
         
-        <meta name="description" content="Default JDK Netbeans Linux">
-        <meta name="keywords" content="JAVA ubuntu linux Netbeans JDK">
+        <meta name="description" content="Analise de hardware framework algoritmos linguagens de programção">
+        
         <meta name="viewport" content="width=device-width">
-        <link rel="canonical" href="http://blog.claudioonohara.eti.br/blog/2016/04/03/netbeans-default-jdk-linux">
+        <link rel="canonical" href="http://blog.claudioonohara.eti.br/post/2015/09/24/ssd-vs-raid0">
 
         <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic' rel='stylesheet' type='text/css'>
         <link href="http://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css">
@@ -40,7 +40,7 @@
     <label for="toggle" class="toggle" data-open="Menu" data-close="Fechar Menu"></label>
     <ul class="menu">
     <li><a href="/">Home</a></li>
-    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/blog/">Posts</a></li>
     <li><a href="/projetos">Apps</a></li>
     <li><a href="/contato">Contato</a></li>
 </ul>
@@ -80,7 +80,7 @@
                     <article class="article article--single">
     <header class="article__header">
     
-        <h1 class="article__title">Netbeans default JDK linux</h1>
+        <h1 class="article__title">SSD vs RAID 0</h1>
     
 
     
@@ -92,7 +92,7 @@
 
 
 
-    <time class="article__date pull-left" datetime="2016-04-03T10:46:44-04:00" pubdate><i class="fa fa-calendar"></i> Apr 3rd, 2016</time>
+    <time class="article__date pull-left" datetime="2015-09-24T22:49:16-04:00" pubdate><i class="fa fa-calendar"></i> Sep 24th, 2015</time>
 
 
 
@@ -105,11 +105,7 @@
         
 
             
-                <li><a class='category' href='/blog/categories/linux/'>linux</a></li>
-            
-                <li><a class='category' href='/blog/categories/ide/'>ide</a></li>
-            
-                <li><a class='category' href='/blog/categories/java/'>java</a></li>
+                <li><a class='category' href='/blog/categories/hardware/'>hardware</a></li>
             
         
         </ul>
@@ -124,37 +120,67 @@
 
 
 
-    <!-- more -->
-
-
-<p> 1 - Editar o arquivo 'netbeans.conf' que está localizado dentro da pasta de arquivos do Netbeans. 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>nano /home/usuario/netbeans-8.0.2/etc/netbeans.conf</span></code></pre></td></tr></table></div></figure>
-</p>
+    <p>Só para curiosidade segue testes efetuados com discos ligados em RAID 0 e um disco SSD  </p>
 
 
 
 
-<p> 2 - Configurar o parametro  "netbeans_jdkhome" do arquivo 'netbeans.conf' para o jdk desejado:
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>netbeans_jdkhome="/usr/local/java/jdk1.8.0_77"</span></code></pre></td></tr></table></div></figure>
-</p>
+<h3>SSD</h3>
+
+
+<!-- more -->
+
+
+<h4>INFO:</h4>
+
+
+<ul>
+  <li>OS: UBUNTU 14.04</li>
+  <li>FS: EXT4</li>
+</ul>
 
 
 
 
-<p> 3 - Renicie o Netbeans para verificar o resultado.
-<img src="/images/netbeans-default-jdk-linux/netbeans_default_jdk.png" title="&#34;Default JDK alterado com sucesso!&#34;" alt="&#34;Default JDK alterado com sucesso!&#34;">
-</p>
+<blockquote><p>Model=Samsung SSD 840 EVO 250GB, FwRev=EXT0DB6Q<br/> Config={ Fixed }<br/> RawCHS=16383/16/63, TrkSize=0, SectSize=0, ECCbytes=0<br/> BuffType=unknown, BuffSize=unknown, MaxMultSect=1, MultSect=1<br/> CurCHS=16383/16/63, CurSects=16514064, LBA=yes, LBAsects=488397168<br/> IORDY=on/off, tPIO={min:120,w/IORDY:120}, tDMA={min:120,rec:120}<br/> PIO modes:  pio0 pio1 pio2 pio3 pio4 <br/> DMA modes:  mdma0 mdma1 mdma2 <br/> UDMA modes: udma0 udma1 udma2 udma3 udma4 udma5 *udma6 <br/> AdvancedPM=no WriteCache=enabled<br/> Drive conforms to: unknown:  ATA/ATAPI-2,3,4,5,6,7</p></blockquote>
+
+
+<p> <h4>HDPARM TESTE:</h4></p>
+
+<blockquote><p>????@dev:~# hdparm -t /dev/sda1</p><p>/dev/sda1:<br/> Timing buffered disk reads: 1542 MB in  3.00 seconds = 513.76 MB/sec</p></blockquote>
+
+
+<p> <h3>RAID 0</h3></p>
+
+<h4>INFO:</h4>
+
+
+<ul>
+  <li>OS: UBUNTU 14.04</li>
+  <li>FS: EXT4</li>
+  <li>RAID 0 efetuado pela placa-mãe ASUS P5WDH-DELUXE(STRIP:128KB)</li>
+  <li>2 X SAMSUNG Spinpoint F1 HD322HJ 320GB 7200 RPM 16MB Cache SATA 3.0Gb/s 3.5"</li>
+</ul>
+
+
+<p> <h4>HDPARM TESTE:</h4></p>
+
+<blockquote><p>????@dev:~# hdparm -t /dev/mapper/isw_deefcbeej_raidlinux1</p><p>/dev/mapper/isw_deefcbeej_raidlinux1:<br/> Timing buffered disk reads: 652 MB in  3.00 seconds = 217.17 MB/sec</p></blockquote>
 
 
 
 
-<p> 
-    <a href="http://stackoverflow.com/questions/2809366/changing-java-platform-on-which-netbeans-runs" target="_blank" >Fonte</a>
-</p>
+<h4>ANALISE:</h4>
 
 
+<p>O SSD apesar de ser um tipo de hardware mais novo, foi melhor reconhecido pelo sistema operacional UBUNTU. Digo
+isso, porque utilizando o mesmo hardware no Windows 7(para testes foi utilizado o hdtach)
+o resultado obtido para o SSD foi praticamente igual, já para o RAID 0, leitura ficou na casa dos 300MB/sec .</p>
+
+
+<p>O conjunto de hardware necessário para realizar o RAID 0 atualmente ainda é mais barato,
+e possui um custo por GB muito mais barato, mas possui um desempenho menor que um SSD e a controladora RAID pode não ser
+reconhecida pelo sistema operacional escolhido.</p>
 
 
 
@@ -207,23 +233,23 @@
     <ul class="divided">
         
         <li class="post">
-            <a href="/blog/2016/04/03/netbeans-default-jdk-linux/">Netbeans default JDK linux</a>
+            <a href="/post/2016/04/03/netbeans-default-jdk-linux/">Netbeans default JDK linux</a>
         </li>
         
         <li class="post">
-            <a href="/blog/2016/04/03/habilitando-o-plugin-java-no-firefox-linux-ubuntu/">Habilitando o plugin JAVA no Firefox Linux UBUNTU</a>
+            <a href="/post/2016/04/03/habilitando-o-plugin-java-no-firefox-linux-ubuntu/">Habilitando o plugin JAVA no Firefox Linux UBUNTU</a>
         </li>
         
         <li class="post">
-            <a href="/blog/2016/04/02/configurando-o-java-jre-e-jdk-no-ubuntu/">Configurando o JAVA (JRE E JDK) no UBUNTU</a>
+            <a href="/post/2016/04/02/configurando-o-java-jre-e-jdk-no-ubuntu/">Configurando o JAVA (JRE E JDK) no UBUNTU</a>
         </li>
         
         <li class="post">
-            <a href="/blog/2015/10/17/java-exceptions/">JAVA Exceptions</a>
+            <a href="/post/2015/10/17/java-exceptions/">JAVA Exceptions</a>
         </li>
         
         <li class="post">
-            <a href="/blog/2015/09/24/ssd-vs-raid0/">SSD vs RAID 0</a>
+            <a href="/post/2015/09/24/ssd-vs-raid0/">SSD vs RAID 0</a>
         </li>
         
     </ul>
@@ -328,8 +354,8 @@
     
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://blog.claudioonohara.eti.br/blog/2016/04/03/netbeans-default-jdk-linux/';
-        var disqus_url = 'http://blog.claudioonohara.eti.br/blog/2016/04/03/netbeans-default-jdk-linux/';
+        var disqus_identifier = 'http://blog.claudioonohara.eti.br/post/2015/09/24/ssd-vs-raid0/';
+        var disqus_url = 'http://blog.claudioonohara.eti.br/post/2015/09/24/ssd-vs-raid0/';
         var disqus_script = 'embed.js';
     
     (function () {

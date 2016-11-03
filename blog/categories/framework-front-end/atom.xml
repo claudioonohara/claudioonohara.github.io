@@ -4,7 +4,7 @@
     <title><![CDATA[Categoria: framework front-end | CLAUDIO ONOHARA]]></title>
     <link href="http://blog.claudioonohara.eti.br/blog/categories/framework-front-end/atom.xml" rel="self"/>
     <link href="http://blog.claudioonohara.eti.br/"/>
-    <updated>2016-11-02T20:39:29-03:00</updated>
+    <updated>2016-11-02T22:30:09-03:00</updated>
     <id>http://blog.claudioonohara.eti.br/</id>
     <author>
         <name><![CDATA[CLAUDIO ONOHARA]]></name>
@@ -15,9 +15,9 @@
     
     <entry>
         <title type="html"><![CDATA[Hello World! Angular]]></title>
-        <link href="http://blog.claudioonohara.eti.br/blog/2015/09/22/hello-world-angular/"/>
+        <link href="http://blog.claudioonohara.eti.br/post/2015/09/22/hello-world-angular/"/>
         <updated>2015-09-22T20:18:45-04:00</updated>
-        <id>http://blog.claudioonohara.eti.br/blog/2015/09/22/hello-world-angular</id>
+        <id>http://blog.claudioonohara.eti.br/post/2015/09/22/hello-world-angular</id>
         <content type="html"><![CDATA[<div> 
     <p>Segue simples exemplo de uma página com Angular:</p>
 </div>

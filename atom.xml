@@ -4,7 +4,7 @@
     <title><![CDATA[CLAUDIO ONOHARA]]></title>
     <link href="http://blog.claudioonohara.eti.br/atom.xml" rel="self"/>
     <link href="http://blog.claudioonohara.eti.br/"/>
-    <updated>2016-11-02T20:39:29-03:00</updated>
+    <updated>2016-11-02T22:30:09-03:00</updated>
     <id>http://blog.claudioonohara.eti.br/</id>
     <author>
         <name><![CDATA[CLAUDIO ONOHARA]]></name>
@@ -15,9 +15,9 @@
     
     <entry>
         <title type="html"><![CDATA[Netbeans default JDK linux]]></title>
-        <link href="http://blog.claudioonohara.eti.br/blog/2016/04/03/netbeans-default-jdk-linux/"/>
+        <link href="http://blog.claudioonohara.eti.br/post/2016/04/03/netbeans-default-jdk-linux/"/>
         <updated>2016-04-03T10:46:44-04:00</updated>
-        <id>http://blog.claudioonohara.eti.br/blog/2016/04/03/netbeans-default-jdk-linux</id>
+        <id>http://blog.claudioonohara.eti.br/post/2016/04/03/netbeans-default-jdk-linux</id>
         <content type="html"><![CDATA[<!-- more -->
 
 
@@ -55,9 +55,9 @@
     
     <entry>
         <title type="html"><![CDATA[Habilitando o plugin JAVA no Firefox Linux UBUNTU]]></title>
-        <link href="http://blog.claudioonohara.eti.br/blog/2016/04/03/habilitando-o-plugin-java-no-firefox-linux-ubuntu/"/>
+        <link href="http://blog.claudioonohara.eti.br/post/2016/04/03/habilitando-o-plugin-java-no-firefox-linux-ubuntu/"/>
         <updated>2016-04-03T09:31:41-04:00</updated>
-        <id>http://blog.claudioonohara.eti.br/blog/2016/04/03/habilitando-o-plugin-java-no-firefox-linux-ubuntu</id>
+        <id>http://blog.claudioonohara.eti.br/post/2016/04/03/habilitando-o-plugin-java-no-firefox-linux-ubuntu</id>
         <content type="html"><![CDATA[<!-- more -->
 
 
@@ -101,9 +101,9 @@
     
     <entry>
         <title type="html"><![CDATA[Configurando o JAVA (JRE E JDK) no UBUNTU]]></title>
-        <link href="http://blog.claudioonohara.eti.br/blog/2016/04/02/configurando-o-java-jre-e-jdk-no-ubuntu/"/>
+        <link href="http://blog.claudioonohara.eti.br/post/2016/04/02/configurando-o-java-jre-e-jdk-no-ubuntu/"/>
         <updated>2016-04-02T22:37:04-04:00</updated>
-        <id>http://blog.claudioonohara.eti.br/blog/2016/04/02/configurando-o-java-jre-e-jdk-no-ubuntu</id>
+        <id>http://blog.claudioonohara.eti.br/post/2016/04/02/configurando-o-java-jre-e-jdk-no-ubuntu</id>
         <content type="html"><![CDATA[<!-- more -->
 
 
@@ -175,9 +175,9 @@
     
     <entry>
         <title type="html"><![CDATA[JAVA Exceptions]]></title>
-        <link href="http://blog.claudioonohara.eti.br/blog/2015/10/17/java-exceptions/"/>
+        <link href="http://blog.claudioonohara.eti.br/post/2015/10/17/java-exceptions/"/>
         <updated>2015-10-17T14:55:59-04:00</updated>
-        <id>http://blog.claudioonohara.eti.br/blog/2015/10/17/java-exceptions</id>
+        <id>http://blog.claudioonohara.eti.br/post/2015/10/17/java-exceptions</id>
         <content type="html"><![CDATA[<!-- more -->
 
 
@@ -396,9 +396,9 @@
     
     <entry>
         <title type="html"><![CDATA[SSD vs RAID 0]]></title>
-        <link href="http://blog.claudioonohara.eti.br/blog/2015/09/24/ssd-vs-raid0/"/>
+        <link href="http://blog.claudioonohara.eti.br/post/2015/09/24/ssd-vs-raid0/"/>
         <updated>2015-09-24T22:49:16-04:00</updated>
-        <id>http://blog.claudioonohara.eti.br/blog/2015/09/24/ssd-vs-raid0</id>
+        <id>http://blog.claudioonohara.eti.br/post/2015/09/24/ssd-vs-raid0</id>
         <content type="html"><![CDATA[<p>Só para curiosidade segue testes efetuados com discos ligados em RAID 0 e um disco SSD  </p>
 
 
@@ -466,9 +466,9 @@ reconhecida pelo sistema operacional escolhido.</p>
     
     <entry>
         <title type="html"><![CDATA[Hello World! Angular]]></title>
-        <link href="http://blog.claudioonohara.eti.br/blog/2015/09/22/hello-world-angular/"/>
+        <link href="http://blog.claudioonohara.eti.br/post/2015/09/22/hello-world-angular/"/>
         <updated>2015-09-22T20:18:45-04:00</updated>
-        <id>http://blog.claudioonohara.eti.br/blog/2015/09/22/hello-world-angular</id>
+        <id>http://blog.claudioonohara.eti.br/post/2015/09/22/hello-world-angular</id>
         <content type="html"><![CDATA[<div> 
     <p>Segue simples exemplo de uma página com Angular:</p>
 </div>
