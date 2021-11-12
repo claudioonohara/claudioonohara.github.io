@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>index on Projetos</title>
-    <link>https://github.com/claudioonohara/claudioonohara.github.io/tags/index/</link>
+    <link>https://claudioonohara.github.io/tags/index/</link>
     <description>Recent content in index on Projetos</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>pt-br</language><atom:link href="https://github.com/claudioonohara/claudioonohara.github.io/tags/index/index.xml" rel="self" type="application/rss+xml" />
+    <language>pt-br</language><atom:link href="https://claudioonohara.github.io/tags/index/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Posts</title>
-      <link>https://github.com/claudioonohara/claudioonohara.github.io/post/</link>
+      <link>https://claudioonohara.github.io/post/</link>
       <pubDate>Thu, 11 Nov 2021 22:42:23 -0400</pubDate>
       
-      <guid>https://github.com/claudioonohara/claudioonohara.github.io/post/</guid>
+      <guid>https://claudioonohara.github.io/post/</guid>
       
         <description></description>
       
