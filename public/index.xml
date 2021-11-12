@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projetos</title>
+    <link>https://github.com/claudioonohara/claudioonohara.github.io/</link>
+    <description>Recent content on Projetos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://github.com/claudioonohara/claudioonohara.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Desafio Curso JsExpert</title>
+      <link>https://github.com/claudioonohara/claudioonohara.github.io/post/projeto-javascript-com-cobertura-testes/</link>
+      <pubDate>Thu, 11 Nov 2021 22:42:23 -0400</pubDate>
+      
+      <guid>https://github.com/claudioonohara/claudioonohara.github.io/post/projeto-javascript-com-cobertura-testes/</guid>
+      
+        <description>Descrição do Projeto Consumindo a PokeAPI, faça uma API que retorne 3 pokemóns aleatórios para formar seu time inicial numa jornada pokemon.</description>
+      
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://github.com/claudioonohara/claudioonohara.github.io/archives/</link>
+      <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://github.com/claudioonohara/claudioonohara.github.io/archives/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://github.com/claudioonohara/claudioonohara.github.io/contact/</link>
+      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://github.com/claudioonohara/claudioonohara.github.io/contact/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://github.com/claudioonohara/claudioonohara.github.io/about/</link>
+      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://github.com/claudioonohara/claudioonohara.github.io/about/</guid>
+      
+        <description>Written in Go, Hugo is an open source static site generator available under the Apache Licence 2.</description>
+      
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://github.com/claudioonohara/claudioonohara.github.io/imprint/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://github.com/claudioonohara/claudioonohara.github.io/imprint/</guid>
+      
+        <description>Legal Disclosure Information in accordance with the applicable law
+Jane Doe</description>
+      
+    </item>
+    
+  </channel>
+</rss>

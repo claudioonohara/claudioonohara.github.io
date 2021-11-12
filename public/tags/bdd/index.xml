@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bdd on Projetos</title>
+    <link>https://github.com/claudioonohara/claudioonohara.github.io/tags/bdd/</link>
+    <description>Recent content in bdd on Projetos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Thu, 11 Nov 2021 22:42:23 -0400</lastBuildDate><atom:link href="https://github.com/claudioonohara/claudioonohara.github.io/tags/bdd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Desafio Curso JsExpert</title>
+      <link>https://github.com/claudioonohara/claudioonohara.github.io/post/projeto-javascript-com-cobertura-testes/</link>
+      <pubDate>Thu, 11 Nov 2021 22:42:23 -0400</pubDate>
+      
+      <guid>https://github.com/claudioonohara/claudioonohara.github.io/post/projeto-javascript-com-cobertura-testes/</guid>
+      
+        <description>Descrição do Projeto Consumindo a PokeAPI, faça uma API que retorne 3 pokemóns aleatórios para formar seu time inicial numa jornada pokemon.</description>
+      
+    </item>
+    
+  </channel>
+</rss>
