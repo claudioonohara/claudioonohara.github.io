@@ -58,7 +58,7 @@ ex.: `["mega-punch","fire-punch","thunder-punch"]`).
 npm run test:dev
 ```
 
-- Uma unica vez: 
+- Uma unica vez : 
 ```
 npm run test
 ```
