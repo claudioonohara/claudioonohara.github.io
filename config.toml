@@ -29,12 +29,12 @@ profilePicture = "images/claudio_avatar_github.jpg"
 [[params.socialIcons]]
 icon = "fab fa-linkedin"
 title = "Linkedin"
-url = "https://de.linkedin.com/"
+url = "https://www.linkedin.com/in/ctocto/"
 
 [[params.socialIcons]]
 icon = "fab fa-github"
 title = "GitHub"
-url = "https://github.com/lxndrblz/anatole/"
+url = "https://github.com/claudioonohara/"
 
 # Enable Disqus
 #disqusShortname = ""
